@@ -6,11 +6,11 @@ class TablazatSorView {
 
         this.#sor();
         this.index = index;
-        this.sorElem = this.tablaElem.children("tr:last-child ")
+        this.sorElem = this.tablaElem.children("tbody").children("tr:last-child ")
         this.pipaElem = this.sorElem.children("td").children(".kesz")
         this.megseElem = this.sorElem.children("td").children(".megse").hide()
         this.torolElem = this.sorElem.children("td").children(".torol")
-        this.sorElem = this.tablaElem.children("tr:last-child");
+        
         this.pipaElem.on("click", () => {
             console.log(this)
             this.sorElem.css("background-color", "lightgreen")
