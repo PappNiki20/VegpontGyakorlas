@@ -38,7 +38,7 @@ class TablazatSorView {
             const element = this.#adat[key];
             txt += `<td>${element}</td>`;
         }
-
+     
         txt += `<td>
             <span class = "kesz">✔</span>
             <span class = "megse"> ✘</span>

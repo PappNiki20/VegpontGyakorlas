@@ -7,7 +7,7 @@ class View{
       this.#leiro = leiro;
       console.log(leiro)
       
-      szuloElem.append('<table class="table table-bordered table-striped">');
+      szuloElem.append(' <table class="table table-dark table-striped">');
       this.tablaElem = szuloElem.children("table");
   
       this.megjelenit();
@@ -16,6 +16,7 @@ class View{
      
        
       this.fejlec()
+      this.tablaElem.append(`<tbody>`);
       this.#lista.forEach((elem, index) => {
         new TablazatSorView(elem, this.tablaElem, index);
       });
@@ -23,13 +24,15 @@ class View{
 
     }
     fejlec() {
-      let txt = "<tr>";
-      
+      let txt = " <thead>";
+      txt += "<tr>"
       for (const key in this.#leiro) {
         console.log(key)
         txt += `<th>${this.#leiro[key].megj}</th>`;
       }
-      txt += `</tr>`;
+     
+      txt += `<th>Állapot</th></tr>`;
+      txt += `</thead>`
   
 
 
